@@ -1,4 +1,4 @@
-# A Typelevel Toolkit g8 template
+# A Typelevel Toolkit g8 template 🚀
 
 A [Giter8](https://www.foundweekends.org/giter8/) template for [Typelevel Toolkit](https://github.com/typelevel/toolkit)!
 
@@ -10,4 +10,4 @@ scala-cli --power new typelevel/toolkit.g8
 
 ## Requirements
 
-- `scala-cli >= 1.0.2` 
+- [`scala-cli >= 1.0.2`](https://scala-cli.virtuslab.org/install/)

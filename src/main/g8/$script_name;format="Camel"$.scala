@@ -1,4 +1,4 @@
-//> using toolkit typelevel:latest
+//> using toolkit typelevel:default
 
 import cats.effect.*
 

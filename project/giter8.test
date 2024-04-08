@@ -1,0 +1,4 @@
+# check if the files are created
+$ exists Myscript.scala
+$ exists .gitignore
+$ exists .scalafmt.conf

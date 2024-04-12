@@ -1,10 +1,10 @@
-// This build is for this Giter8 template.
-// To test the template run `g8` or `g8Test` from the sbt session.
-// See https://www.foundweekends.org/giter8/testing.html#Using+the+Giter8Plugin for more details.
 lazy val root = (project in file("."))
-  .enablePlugins(ScriptedPlugin)
   .settings(
     name := "Typelevel Toolkit template",
     scriptedLaunchOpts ++= List("-Xms1024m", "-Xmx1024m", "-XX:ReservedCodeCacheSize=128m", "-Xss2m", "-Dfile.encoding=UTF-8"),
-    resolvers += Resolver.url("typesafe", url("https://repo.typesafe.com/typesafe/ivy-releases/"))(Resolver.ivyStylePatterns)
+    resolvers += Resolver.url("typesafe", url("https://repo.typesafe.com/typesafe/ivy-releases/"))(Resolver.ivyStylePatterns),
+    ThisBuild / githubWorkflowPublishTargetBranches := Seq(),
+    ThisBuild / githubWorkflowScalaVersions         := Seq("2.12"),
+    ThisBuild / githubWorkflowBuild                 :=
+      Seq(WorkflowStep.Sbt(List("g8Test"), name = Some("Testing template"))),
   )
